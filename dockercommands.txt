@@ -1,6 +1,5 @@
 1  sudo yum install git maven java -y
     2  java -version
-    3  git -version
     4  git --version
     5  mvn --version
     6  sudo yum install docker -y
@@ -22,13 +21,10 @@
    22  docker run -it --name container-2 centos:latest
    23  docker ps
    24  docker run -it --name conatiner-3 centos:latest
-   25  docker ps
    26  docker stop dc1fe6e25ba7
-   27  docker ps
    28  docker start dc1fe6e25ba7
    29  docker ps
    30  docker pause dc1fe6e25ba7
-   31  docker ps
    32  docker un-pause dc1fe6e25ba7
    33  docker unpause dc1fe6e25ba7
    34  docker ps
@@ -39,8 +35,6 @@
    39  docker ps
    40  docker version
    41  docker -v
-   42  dcoker info
-   43  docker info
    44  docker login 
    45  docker system df
    46  docker logs dc1fe6e25ba7
@@ -53,7 +47,6 @@
    53  docker images
    54  docker push sayedbavajan/backup:latest
    55  histoty
-   56  history
    57  docker images
    58  docker ps
    59  docker search -s 100 jenkins
@@ -127,7 +120,6 @@
   127  docker images
   128  docker run -t --name jenkins -p 8080:8080 -p 50000:50000 jenkins/jenkins
   129  clear
-  130  docker netwirk ls
   131  docker network ls
   132  docker network inspect bridge
   133  docker images
@@ -144,7 +136,6 @@
   144  docker ps
   145  docker inspect 302cbc2ed11e
   146  clear
-  147  ls 
   148  vi volume-sharing-file
   149  pwd
   150  ls
