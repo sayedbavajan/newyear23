@@ -1,0 +1,162 @@
+1  sudo yum install git maven java -y
+    2  java -version
+    3  git -version
+    4  git --version
+    5  mvn --version
+    6  sudo yum install docker -y
+    7  sudo systemctl start docker 
+    8  sudo systemctl status docker 
+    9  docker images
+   10  sudo chmod 777 /var/run/docker.sock
+   11  docker images
+   12  docker ps
+   13  docker pull ubuntu
+   14  docker pull centos
+   15  docker images
+   16  vi Dockerfile
+   17  docker build -t myimage:latest .
+   18  docker images
+   19  docker run -it --name conatiner-1 myimage:latest
+   20  docker ps
+   21  docker ps -a
+   22  docker run -it --name container-2 centos:latest
+   23  docker ps
+   24  docker run -it --name conatiner-3 centos:latest
+   25  docker ps
+   26  docker stop dc1fe6e25ba7
+   27  docker ps
+   28  docker start dc1fe6e25ba7
+   29  docker ps
+   30  docker pause dc1fe6e25ba7
+   31  docker ps
+   32  docker un-pause dc1fe6e25ba7
+   33  docker unpause dc1fe6e25ba7
+   34  docker ps
+   35  docker top dc1fe6e25ba7
+   36  docker stats dc1fe6e25ba7
+   37  docker ps
+   38  docker attach dc1fe6e25ba7
+   39  docker ps
+   40  docker version
+   41  docker -v
+   42  dcoker info
+   43  docker info
+   44  docker login 
+   45  docker system df
+   46  docker logs dc1fe6e25ba7
+   47  docker images
+   48  docker ps
+   49  docker commit dc1fe6e25ba7 backup:latest
+   50  docker images
+   51  docker tag backup:latest sayedbavajan/backup:latest
+   52  docker ps
+   53  docker images
+   54  docker push sayedbavajan/backup:latest
+   55  histoty
+   56  history
+   57  docker images
+   58  docker ps
+   59  docker search -s 100 jenkins
+   60  docker images
+   61  docker history ubuntu:latest
+   62  docker history centos:latest
+   63  docker history myimages:latest
+   64  docker history myimage:latest
+   65  docker ps
+   66  docker run -it --name dc1fe6e25ba7 -h sayed-host centos
+   67  docker ps
+   68  docker exec -it sayed-host /bin/bash
+   69  docker exec -it sayed-host dc1fe6e25ba7 /bin/bash
+   70  docker exec -it dc1fe6e25ba7 /bin/bash
+   71  docker ps
+   72  docker exec -it dc1fe6e25ba7 /bin/bash
+   73  docker start dc1fe6e25ba7
+   74  docker exec -it dc1fe6e25ba7 /bin/bash
+   75  docker ps
+   76  clear
+   77  docker images
+   78  docker save ubuntu:latest ubuntu.tgz
+   79  docker save ubuntu ubuntu.tgz
+   80  docker ps
+   81  docker save centos centos.tgz
+   82  docker save -o centos centos.tar
+   83  docker save -o centos.tar centos
+   84  ls
+   85  docker images
+   86  docker save ubuntu.tgz ubuntu
+   87  docker save -o ubuntu.tgz ubuntu
+   88  ls
+   89  docker load centos.tar 
+   90  rm -rf centos.tar ubuntu.tgz 
+   91  ls
+   92  docker images
+   93  docker save ubuntu > backup-ubuntu.tgz
+   94  docker save centos > backup-centos.tar
+   95  sudo ysytemctl start docker
+   96  sudo systemctl start docker
+   97  sudo systemctl status docker
+   98  docker images
+   99  sudo chmod 777 /var/run/docker.sock
+  100  docker images
+  101  docker ps
+  102  docker ps -a 
+  103  ls
+  104  docker load < backup-centos.tar 
+  105  docker images
+  106  ls
+  107  docker ps
+  108  docker ps -a
+  109  docker start f07b04add94d
+  110  docker start dc1fe6e25ba
+  111  docker start be29aa284b31
+  112  docker start b32ffde2ab94
+  113  docker ps
+  114  docker export f07b04add94d > backup.tgz
+  115  ls
+  116  docker import backup.tgz 
+  117  docker images
+  118  docker rmi -f 7747c1e91bce
+  119  docker images
+  120  docker import backup.tgz backup-conat-1:latest
+  121  docker images
+  122  docker ps 
+  123  docker diff f07b04add94d
+  124  docker describe f07b04add94d
+  125  docker logs f07b04add94d
+  126  docker pull jenkins/jenkins
+  127  docker images
+  128  docker run -t --name jenkins -p 8080:8080 -p 50000:50000 jenkins/jenkins
+  129  clear
+  130  docker netwirk ls
+  131  docker network ls
+  132  docker network inspect bridge
+  133  docker images
+  134  docker image inspect centos
+  135  docker ps
+  136  docker inspect f07b04add94d
+  137  docker network ls
+  138  docker network create --subnet 19.0.0.0/16 --gateway 19.0.0.1/16 sayed-network
+  139  docker network create --subnet 19.0.0.0/16 --gateway 19.0.0.1 sayed-network
+  140  docker network ls
+  141  docker network inspect sayed-network
+  142  docker run -it --net sayed-network centos
+  143  docker images
+  144  docker ps
+  145  docker inspect 302cbc2ed11e
+  146  clear
+  147  ls 
+  148  vi volume-sharing-file
+  149  pwd
+  150  ls
+  151  docker run -it --name volume-sharing-file -v /home/ec2-user:/home cetos
+  152  docker run -it --name volume-sharing-file -v /home/ec2-user:/home centos
+  153  docker ps
+  154  docker rm -f 96d4a698f636
+  155  docker ps
+  156  docker run -t --name volume-sharing /home/ec2-user:/home ubuntu
+  157  docker run -it --name volume-sharing /home/ec2-user:/home ubuntu
+  158  docker run -it --name volume-sharing /home/ec2-user:/home centos:latest
+  159  docker run -it --name volume-sharing /home/ec2-user:/home centos
+  160  docker run -it --name volume-sharing-file /home/ec2-user:/home centos
+  161  docker ps
+  162  docker ps -a
